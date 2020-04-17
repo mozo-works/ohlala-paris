@@ -3,10 +3,10 @@
 <div class="px-3">
   <div class="card-columns">
     <div class="card">
-      <img src="//scontent-icn1-1.cdninstagram.com/vp/9bd199161dd4715aab65e5ffc92cb659/5E21CB36/t51.2885-15/e35/p1080x1080/66777149_158254028628268_649526811915470175_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=104" alt="" class="img-fluid" />
+      <img src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/66777149_158254028628268_649526811915470175_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=hws25hAV21gAX8LKzLK&oh=b3c55aebf27fa8dbebb54cec324af9e3&oe=5EC367FB" alt="" class="img-fluid" />
     </div>
     <div class="card mb-3" v-for="(edge, index) in $page.photos.edges" :key="edge.node.id">
-      <a :href="'https://instagram.com/p/' + edge.node.shortcode" target="_blank" rel="noopener">
+      <a :href="'https://instagram.com/p/' + edge.node.shortcode" target="_blank" rel="noopener" :key="index">
         <g-image :src="edge.node.display_url" :alt="'Instagram Photo: ' + edge.node.edge_media_to_caption.edges[0].node.text" class="photo img-fluid" />
       </a>
     </div>
